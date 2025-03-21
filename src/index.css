@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-dark to-accent-dark dark:from-primary-light dark:to-accent-light bg-clip-text text-transparent;
+  }
+}
+
+/* Smooth theme transition */
+.transition-theme {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
